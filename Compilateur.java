@@ -17,7 +17,7 @@ public class Compilateur {
         generation_stub(methods_str);
     }
     public static void generation_stub(String[] NomMethodes, Method[] ListeMethodes){
-        String stub_core = "";
+        String stub_core = ""; //TODO
         String stub_text = "java.net.Socket s = new java.net.Socket(\"127.0.0.1\",12345);\n
         java.io.DataOutputStream dos = new java.io.DataOutputStream(s.getOutputStream());\n
         java.io.ObjectInputStream ois = new java.io.ObjectInputStream(s.getInputStream());\n";
@@ -31,11 +31,13 @@ public class Compilateur {
             }
             stub_methodes += "return ois.readObject()\n
             }\n"
+
+            //TODO Ecrire sur fichier
         }
 
     }
     public static void generation_sekelton(String[] NomMethodes, Method[] ListeMethodes){
-        String skeleton_core = "";
+        String skeleton_core = ""; //TODO
         String skeleton_text = "java.net.ServerSocket sos = new java.net.ServerSocket(12345);\n
         java.net.Socket s = sos.accept();\n
         java.io.DataInputStream dis = new java.io.DataInputStream(s.getInputStream());\n
@@ -50,6 +52,7 @@ public class Compilateur {
             }\n";
 
         }
+        //TODO Ecrire sur fichier
     }
 
 }
